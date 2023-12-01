@@ -1,24 +1,18 @@
+
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MoviePage from './components/MoviePage';
+
+const movies = [
+  { title: 'Película 1', videoUrl: 'https://res.cloudinary.com/dcba9lt2s/video/upload/v1701026652/samples/sea-turtle.mp4' },
+  { title: 'Película 2', videoUrl: 'URL_DE_TU_PELICULA_2.mp4' },
+  { title: 'Película 3', videoUrl: 'URL_DE_TU_PELICULA_3.mp4' },
+
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MoviePage movies={movies} />
     </div>
   );
 }
