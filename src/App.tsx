@@ -1,20 +1,25 @@
-
 import React from 'react';
-import MoviePage from './components/MoviePage';
+import { Card } from 'antd';
 
-const movies = [
-  { title: 'Película 1', videoUrl: 'https://res.cloudinary.com/dcba9lt2s/video/upload/v1701026652/samples/sea-turtle.mp4' },
-  { title: 'Película 2', videoUrl: 'https://res.cloudinary.com/dcba9lt2s/video/upload/v1701435106/hbi4n0jgf7fqyl0jw8dw.mp4' },
-  { title: 'Película 3', videoUrl: 'URL_DE_TU_PELICULA_3.mp4' },
+const { Meta } = Card;
 
-];
-
-function App() {
-  return (
-    <div className="App">
-      <MoviePage movies={movies} />
-    </div>
-  );
-}
+const App: React.FC = () => (
+  <Card
+    hoverable
+    style={{ width: 240, marginTop: 200, justifyContent: 'center', marginLeft: '600px' }}
+    cover={<img alt="example" src="https://res.cloudinary.com/dcba9lt2s/image/upload/v1702476736/onbqxbd3sf9rmrrgvjkt.webp" />}
+  >
+    <Meta
+      title={
+        <div>
+          <span style={{ color: '#FF00E8' }}>REACT GRAHQL DEVELOP</span>
+          <br />
+          <span style={{ color: '#FF00E8' }}>FOR ANY DEVELOPMENT</span>
+        </div>
+      }
+      description="Best one bars to take friends and relatives, one bars to take friends and relatives"
+    />
+  </Card>
+);
 
 export default App;
